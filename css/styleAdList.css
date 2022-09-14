@@ -1,0 +1,101 @@
+#tabs{
+    display: flex;
+    flex-direction: row;
+}
+
+#allAds, #myAds{
+    text-align: center;
+    padding: 10px 0px;
+}
+
+#allAds:hover, #myAds:hover{
+    background-color: rgb(62, 158, 255);
+}
+
+content{
+    background-color: whitesmoke;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.ad{
+    display: flex;
+    margin: 5px;
+    box-sizing: border-box;
+}
+
+.adDetails{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 5px;
+}
+
+.adTitle, .adPrice{
+    font-weight: bold;
+}
+
+.adDescription, .adTitle{
+    margin: 5px 5px 0px 5px;
+}
+
+.adTimePrice{
+    display: flex;
+}
+
+@media screen and (max-width:600px){
+    #allAds, #myAds{
+        flex-grow: 1;
+    }
+
+    .ad{
+        flex-direction: row;
+    }
+    
+    .ad img{
+        width: 150px;
+        height: 150px;
+    }
+    
+    .adDetails{
+        flex-grow: 1;
+    }
+
+    .adTimePrice{
+        flex-direction: row;
+        justify-content: space-between;
+        margin: auto 5px 5px 5px;
+    }
+}
+
+@media screen and (min-width:600px){
+    #allAds, #myAds{
+        width: 25%;
+    }
+
+    content{
+        flex-direction: row;
+    }
+
+    .ad{
+        flex-direction: column;
+    }
+    
+    .ad img{
+        width: 200px;
+        height: 200px;
+    }
+    
+    .adDetails{
+        height: fit-content;
+    }
+    
+    .adTimePrice{
+        flex-direction: column;
+        margin: 20px 5px 5px 5px;
+    }
+
+    .adPrice{
+        margin-top: 5px;
+    }
+}
